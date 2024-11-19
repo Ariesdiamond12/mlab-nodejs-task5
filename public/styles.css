@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  h1 {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  #message-area {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .tiles {
+    margin: 48px auto;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(6, 100px);
+    gap: 16px;
+  }
+  
+  .tile {
+    height: 100px;
+    background-color: #192a51;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+  }
+  
+  .tile::before {
+    content: "🔮"; /* Add your chosen emoji here */
+    font-size: 40px; /* Adjust size as needed */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tile.flipped::before,
+  .tile.matched::before {
+    display: none; /* Hide the emoji when flipped or matched */
+  }
+  
+  .tile .hidden-letter {
+    display: none;
+  }
+  
+  .tile.flipped .hidden-letter,
+  .tile.matched .hidden-letter {
+    display: block;
+  }
+  
+  
+  .tile.flipped,
+  .tile.matched {
+    background-color: #967aa1;
+  }
+
+  #reset-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  #reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #192a51;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #reset-button:hover {
+    background-color: #967aa1;
+  }
+  
+  
+  

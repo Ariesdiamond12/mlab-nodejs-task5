@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="../public/styles.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <h1><%= title %></h1> 
+      <div id="message-area"></div>
+      <div class="tiles">
+        <% for (let i = 0; i < shuffledCards.length; i++) { %>
+        <div
+          class="tile"
+          data-letter="<%= shuffledCards[i] %>"
+        >
+          <span class="hidden-letter"><%= shuffledCards[i] %></span>
+        </div>
+        <% } %>
+      </div>
+    </div>
+    
+    <!-- Reset Button outside game container to position it at the bottom -->
+    <div id="reset-container">
+      <button id="reset-button">Reset Game</button>
+    </div>
+    
+    
+    <script src="../public/scripts.js"></script>
+  </body>
+</html>
